@@ -1,45 +1,1319 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Priyadarshani — photos, memories and Instagram moments."
+    content="Priyadarshani — photographs, memories and Instagram moments."
   >
 
   <title>Priyadarshani | Official</title>
 
-  <!-- Google Fonts -->
+
+  <!-- GOOGLE FONTS -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
     rel="stylesheet"
   >
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css">
+
+  <!-- ALL WEBSITE CSS -->
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #f8f5ef;
+      color: #172c45;
+      line-height: 1.7;
+    }
+
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    :root {
+
+      --cream: #f8f5ef;
+
+      --cream-dark: #eee6d9;
+
+      --beige: #e5d5c2;
+
+      --gold: #b39359;
+
+      --gold-light: #d8c59f;
+
+      --navy: #172d46;
+
+      --text: #66645f;
+
+      --white: #ffffff;
+
+      --black: #191919;
+
+      --max: 1180px;
+
+    }
+
+
+    /* ================= NAVIGATION ================= */
+
+    .nav {
+
+      height: 82px;
+
+      padding: 0 6%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      background: rgba(248,245,239,.97);
+
+      border-bottom: 1px solid rgba(23,45,70,.08);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 21px;
+
+      font-weight: 600;
+
+      color: var(--navy);
+
+    }
+
+
+    .brand span {
+
+      color: var(--gold);
+
+      font-size: 29px;
+
+    }
+
+
+    .nav nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+
+    }
+
+
+    .nav nav a {
+
+      font-size: 12px;
+
+      color: #55575a;
+
+      transition: .25s ease;
+
+    }
+
+
+    .nav nav a:hover {
+
+      color: var(--gold);
+
+    }
+
+
+    .nav .nav-btn {
+
+      background: var(--navy);
+
+      color: white;
+
+      padding: 12px 21px;
+
+      border-radius: 8px;
+
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+
+      max-width: var(--max);
+
+      margin: auto;
+
+      min-height: 610px;
+
+      padding: 70px 5% 45px;
+
+      display: grid;
+
+      grid-template-columns: 1fr .9fr;
+
+      gap: 65px;
+
+      align-items: center;
+
+    }
+
+
+    .eyebrow {
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      color: var(--gold);
+
+      margin-bottom: 17px;
+
+      font-weight: 600;
+
+    }
+
+
+    .hero h1 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(48px, 6vw, 74px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2px;
+
+      font-weight: 600;
+
+      color: var(--navy);
+
+    }
+
+
+    .hero h1 span {
+
+      color: var(--gold);
+
+    }
+
+
+    .hero h2 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 19px;
+
+      font-weight: 500;
+
+      margin-top: 18px;
+
+      color: #414c5b;
+
+    }
+
+
+    .hero-text {
+
+      max-width: 500px;
+
+      margin-top: 17px;
+
+      color: var(--text);
+
+      font-size: 15px;
+
+    }
+
+
+    .actions {
+
+      display: flex;
+
+      gap: 13px;
+
+      margin-top: 28px;
+
+    }
+
+
+    .primary,
+    .secondary {
+
+      display: inline-flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      padding: 13px 21px;
+
+      border-radius: 8px;
+
+      font-size: 12px;
+
+      transition: .25s ease;
+
+    }
+
+
+    .primary {
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .primary:hover {
+
+      transform: translateY(-2px);
+
+      background: #2b4561;
+
+    }
+
+
+    .secondary {
+
+      border: 1px solid var(--gold-light);
+
+      color: #70654f;
+
+    }
+
+
+    .secondary:hover {
+
+      background: #eee5d5;
+
+    }
+
+
+    /* ================= HERO IMAGE ================= */
+
+    .hero-image {
+
+      min-height: 485px;
+
+      position: relative;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+    }
+
+
+    .hero-image::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 100%;
+
+      height: 92%;
+
+      bottom: 0;
+
+      background: #e6d8c8;
+
+      border-radius: 0 0 150px 150px;
+
+    }
+
+
+    .hero-image img {
+
+      position: relative;
+
+      z-index: 2;
+
+      width: 88%;
+
+      height: 475px;
+
+      object-fit: cover;
+
+      object-position: center top;
+
+      border-radius: 0 0 140px 140px;
+
+    }
+
+
+    .floating-card {
+
+      position: absolute;
+
+      z-index: 5;
+
+      bottom: 18px;
+
+      left: 5%;
+
+      background: white;
+
+      padding: 12px 20px;
+
+      border-radius: 11px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      box-shadow: 0 10px 30px rgba(40,30,20,.12);
+
+    }
+
+
+    .floating-card strong {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 22px;
+
+      color: var(--gold);
+
+    }
+
+
+    .floating-card span {
+
+      font-size: 10px;
+
+      color: #707070;
+
+    }
+
+
+    /* ================= STATS ================= */
+
+    .stats {
+
+      max-width: 1100px;
+
+      margin: -5px auto 70px;
+
+      background: white;
+
+      border-radius: 14px;
+
+      box-shadow: 0 10px 35px rgba(40,30,20,.08);
+
+      display: grid;
+
+      grid-template-columns: repeat(4,1fr);
+
+      padding: 19px 0;
+
+      position: relative;
+
+      z-index: 10;
+
+    }
+
+
+    .stats div {
+
+      min-height: 65px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      border-right: 1px solid #eee9e1;
+
+    }
+
+
+    .stats div:last-child {
+
+      border-right: 0;
+
+    }
+
+
+    .stats b {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 23px;
+
+      color: var(--gold);
+
+      line-height: 1.2;
+
+    }
+
+
+    .stats span {
+
+      font-size: 10px;
+
+      color: #777;
+
+      margin-top: 3px;
+
+    }
+
+
+    /* ================= GENERAL SECTION ================= */
+
+    .section {
+
+      max-width: var(--max);
+
+      margin: auto;
+
+      padding: 95px 5%;
+
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: start;
+
+    }
+
+
+    .about h2 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(40px,5vw,58px);
+
+      line-height: 1.05;
+
+      font-weight: 500;
+
+    }
+
+
+    .about h2 em {
+
+      color: var(--gold);
+
+    }
+
+
+    .about-copy {
+
+      max-width: 470px;
+
+      padding-top: 18px;
+
+      color: var(--text);
+
+      font-size: 15px;
+
+    }
+
+
+    .about-copy p + p {
+
+      margin-top: 18px;
+
+    }
+
+
+    .underline {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding-bottom: 7px;
+
+      border-bottom: 1px solid var(--gold-light);
+
+      font-size: 13px;
+
+      color: #756b58;
+
+    }
+
+
+    /* ================= 10K FEATURE ================= */
+
+    .feature {
+
+      max-width: none;
+
+      padding: 105px 8%;
+
+      background: var(--cream-dark);
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: center;
+
+    }
+
+
+    .feature-image {
+
+      height: 430px;
+
+      max-width: 560px;
+
+      overflow: hidden;
+
+      border-radius: 5px;
+
+    }
+
+
+    .feature-image img {
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+
+    .feature-copy {
+
+      max-width: 500px;
+
+    }
+
+
+    .feature-copy h2 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(42px,5vw,64px);
+
+      line-height: 1;
+
+      font-weight: 500;
+
+    }
+
+
+    .feature-copy h2 em {
+
+      color: var(--gold);
+
+    }
+
+
+    .feature-copy > p:not(.eyebrow) {
+
+      color: var(--text);
+
+      margin: 23px 0 27px;
+
+      font-size: 15px;
+
+    }
+
+
+    /* ================= HEADINGS ================= */
+
+    .heading {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      margin-bottom: 34px;
+
+    }
+
+
+    .heading h2 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(40px,5vw,55px);
+
+      line-height: 1;
+
+      font-weight: 500;
+
+    }
+
+
+    .heading > p {
+
+      font-size: 13px;
+
+      color: #888;
+
+    }
+
+
+    /* ================= GALLERY ================= */
+
+    .gallery {
+
+      display: grid;
+
+      grid-template-columns: 1.15fr .85fr .85fr;
+
+      gap: 14px;
+
+    }
+
+
+    .gitem {
+
+      height: 470px;
+
+      overflow: hidden;
+
+      border-radius: 12px;
+
+      background: #ddd;
+
+    }
+
+
+    .gitem img {
+
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform .6s ease;
+
+    }
+
+
+    .gitem:hover img {
+
+      transform: scale(1.04);
+
+    }
+
+
+    /* ================= VIDEOS ================= */
+
+    .videos {
+
+      max-width: none;
+
+      background: #e8dfd1;
+
+      padding-left: 8%;
+
+      padding-right: 8%;
+
+    }
+
+
+    .video-cards {
+
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 14px;
+
+    }
+
+
+    .video-card {
+
+      height: 450px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 12px;
+
+      background: #202020;
+
+      color: white;
+
+    }
+
+
+    .video-card img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform .6s ease;
+
+    }
+
+
+    .video-card::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.04) 68%
+      );
+
+    }
+
+
+    .video-card:hover img {
+
+      transform: scale(1.05);
+
+    }
+
+
+    .play {
+
+      position: absolute;
+
+      z-index: 5;
+
+      top: 18px;
+
+      right: 18px;
+
+      width: 38px;
+
+      height: 38px;
+
+      border: 1px solid rgba(255,255,255,.55);
+
+      border-radius: 50%;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      font-size: 11px;
+
+    }
+
+
+    .video-card > div {
+
+      position: absolute;
+
+      z-index: 5;
+
+      left: 22px;
+
+      right: 22px;
+
+      bottom: 22px;
+
+    }
+
+
+    .video-card small {
+
+      display: block;
+
+      font-size: 8px;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .video-card strong {
+
+      display: block;
+
+      font-family: "Playfair Display", serif;
+
+      font-size: 22px;
+
+      line-height: 1.2;
+
+      font-weight: 500;
+
+    }
+
+
+    /* ================= CLOSING ================= */
+
+    .closing {
+
+      text-align: center;
+
+      padding: 110px 20px;
+
+      background: #d9c5ac;
+
+    }
+
+
+    .closing .eyebrow {
+
+      color: #897456;
+
+    }
+
+
+    .closing h2 {
+
+      font-family: "Playfair Display", serif;
+
+      font-size: clamp(42px,6vw,65px);
+
+      line-height: 1;
+
+      font-weight: 500;
+
+      color: var(--navy);
+
+      margin-bottom: 30px;
+
+    }
+
+
+    .closing h2 em {
+
+      color: white;
+
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+
+      padding: 25px 7%;
+
+      background: var(--navy);
+
+      color: rgba(255,255,255,.72);
+
+      display: flex;
+
+      justify-content: space-between;
+
+      font-size: 11px;
+
+    }
+
+
+    /* ================= TABLET ================= */
+
+    @media(max-width:850px) {
+
+      .nav {
+
+        height: 70px;
+
+        padding: 0 5%;
+
+      }
+
+
+      .nav nav {
+
+        gap: 10px;
+
+      }
+
+
+      .nav nav > a:not(.nav-btn) {
+
+        display: none;
+
+      }
+
+
+      .nav .nav-btn {
+
+        padding: 10px 14px;
+
+      }
+
+
+      .hero {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-top: 55px;
+
+      }
+
+
+      .hero-copy {
+
+        text-align: center;
+
+      }
+
+
+      .hero-text {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+      }
+
+
+      .actions {
+
+        justify-content: center;
+
+      }
+
+
+      .hero-image {
+
+        min-height: 430px;
+
+      }
+
+
+      .hero-image img {
+
+        width: 82%;
+
+        height: 420px;
+
+      }
+
+
+      .stats {
+
+        margin-left: 5%;
+
+        margin-right: 5%;
+
+        grid-template-columns: repeat(2,1fr);
+
+      }
+
+
+      .stats div:nth-child(2) {
+
+        border-right: 0;
+
+      }
+
+
+      .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+      }
+
+
+      .feature {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 75px 5%;
+
+      }
+
+
+      .feature-image {
+
+        max-width: none;
+
+      }
+
+
+      .gallery {
+
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+
+      .gitem:first-child {
+
+        grid-column: span 2;
+
+      }
+
+
+      .video-cards {
+
+        grid-template-columns: 1fr;
+
+        max-width: 420px;
+
+        margin: auto;
+
+      }
+
+
+      .video-card {
+
+        height: 500px;
+
+      }
+
+
+      .heading {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:500px) {
+
+      .hero h1 {
+
+        font-size: 48px;
+
+      }
+
+
+      .hero h2 {
+
+        font-size: 17px;
+
+      }
+
+
+      .hero-text {
+
+        font-size: 14px;
+
+      }
+
+
+      .actions {
+
+        flex-direction: column;
+
+      }
+
+
+      .primary,
+      .secondary {
+
+        width: 100%;
+
+      }
+
+
+      .hero-image {
+
+        min-height: 380px;
+
+      }
+
+
+      .hero-image img {
+
+        width: 90%;
+
+        height: 370px;
+
+      }
+
+
+      .floating-card {
+
+        left: 2%;
+
+        bottom: 10px;
+
+      }
+
+
+      .stats span {
+
+        font-size: 9px;
+
+      }
+
+
+      .section {
+
+        padding-top: 70px;
+
+        padding-bottom: 70px;
+
+      }
+
+
+      .gallery {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .gitem:first-child {
+
+        grid-column: auto;
+
+      }
+
+
+      .gitem {
+
+        height: 440px;
+
+      }
+
+
+      .feature-copy h2 {
+
+        font-size: 43px;
+
+      }
+
+
+      footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 8px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
 
+
 <body>
+
 
   <!-- ================= NAVIGATION ================= -->
 
   <header class="nav">
 
-    <a class="brand" href="#home">
-      <span>℘</span> Priyadarshani
+    <a href="#home" class="brand">
+
+      <span>℘</span>
+
+      Priyadarshani
+
     </a>
 
+
     <nav>
+
       <a href="#home">Home</a>
+
       <a href="#about">About</a>
+
       <a href="#gallery">Gallery</a>
+
       <a href="#videos">Videos</a>
+
 
       <a
         class="nav-btn"
@@ -49,18 +1323,22 @@
       >
         Instagram ↗
       </a>
+
     </nav>
 
   </header>
 
 
-  <!-- ================= MAIN CONTENT ================= -->
+
+  <!-- ================= MAIN ================= -->
 
   <main>
+
 
     <!-- ================= HERO ================= -->
 
     <section class="hero" id="home">
+
 
       <div class="hero-copy">
 
@@ -68,32 +1346,45 @@
           Hello, I'm
         </p>
 
+
         <h1>
           Priyadarshani<span>.</span>
         </h1>
+
 
         <h2>
           Passionate. Dedicated. Inspired.
         </h2>
 
+
         <p class="hero-text">
-          A little personal space for photographs, memories
-          and the moments that make the journey special.
+          A little personal space for photographs,
+          memories and the moments that make the
+          journey special.
         </p>
+
 
         <div class="actions">
 
-          <a class="primary" href="#about">
+          <a
+            class="primary"
+            href="#about"
+          >
             About Me
           </a>
 
-          <a class="secondary" href="#gallery">
+
+          <a
+            class="secondary"
+            href="#gallery"
+          >
             View My Gallery
           </a>
 
         </div>
 
       </div>
+
 
 
       <!-- HERO IMAGE -->
@@ -105,9 +1396,12 @@
           alt="Priyadarshani"
         >
 
+
         <div class="floating-card">
 
-          <strong>10K+</strong>
+          <strong>
+            10K+
+          </strong>
 
           <span>
             Instagram followers
@@ -120,36 +1414,66 @@
     </section>
 
 
+
     <!-- ================= STATS ================= -->
 
     <section class="stats">
 
+
       <div>
+
         <b>10K+</b>
-        <span>Instagram Community</span>
+
+        <span>
+          Instagram Community
+        </span>
+
       </div>
 
+
       <div>
+
         <b>♡</b>
-        <span>Beautiful Memories</span>
+
+        <span>
+          Beautiful Memories
+        </span>
+
       </div>
 
+
       <div>
+
         <b>∞</b>
-        <span>More Moments Ahead</span>
+
+        <span>
+          More Moments Ahead
+        </span>
+
       </div>
 
+
       <div>
+
         <b>100%</b>
-        <span>Authentic & Personal</span>
+
+        <span>
+          Authentic & Personal
+        </span>
+
       </div>
 
     </section>
 
 
+
     <!-- ================= ABOUT ================= -->
 
-    <section class="about section" id="about">
+    <section
+      class="about section"
+      id="about"
+    >
+
 
       <div>
 
@@ -157,10 +1481,17 @@
           About
         </p>
 
+
         <h2>
+
           A simple space,
+
           <br>
-          <em>made with heart.</em>
+
+          <em>
+            made with heart.
+          </em>
+
         </h2>
 
       </div>
@@ -170,14 +1501,16 @@
 
         <p>
           Welcome to Priyadarshani's online space —
-          a curated collection of favourite photographs,
-          memories and video moments.
+          a curated collection of favourite
+          photographs, memories and video moments.
         </p>
 
+
         <p>
-          For the latest content, follow along on Instagram
-          and be part of the journey.
+          For the latest content, follow along on
+          Instagram and be part of the journey.
         </p>
+
 
         <a
           class="underline"
@@ -193,9 +1526,11 @@
     </section>
 
 
-    <!-- ================= FEATURE / 10K ================= -->
 
-    <section class="feature section">
+    <!-- ================= 10K FEATURE ================= -->
+
+    <section class="feature">
+
 
       <div class="feature-image">
 
@@ -213,16 +1548,25 @@
           A special milestone
         </p>
 
+
         <h2>
+
           10K followers.
+
           <br>
-          <em>One beautiful journey.</em>
+
+          <em>
+            One beautiful journey.
+          </em>
+
         </h2>
+
 
         <p>
           Thank you for being part of the community.
           Here's to many more memories together.
         </p>
+
 
         <a
           class="primary"
@@ -238,9 +1582,14 @@
     </section>
 
 
+
     <!-- ================= GALLERY ================= -->
 
-    <section class="section" id="gallery">
+    <section
+      class="section"
+      id="gallery"
+    >
+
 
       <div class="heading">
 
@@ -250,11 +1599,13 @@
             Selected moments
           </p>
 
+
           <h2>
             Gallery
           </h2>
 
         </div>
+
 
         <p>
           Some favourite frames.
@@ -263,11 +1614,13 @@
       </div>
 
 
+
       <div class="gallery">
 
-        <!-- Portrait -->
 
-        <div class="gitem large">
+        <!-- GALLERY 1 -->
+
+        <div class="gitem">
 
           <img
             src="assets/images/priyadarshani-portrait.jpg"
@@ -277,7 +1630,7 @@
         </div>
 
 
-        <!-- Hero Image -->
+        <!-- GALLERY 2 -->
 
         <div class="gitem">
 
@@ -289,13 +1642,13 @@
         </div>
 
 
-        <!-- 10K Image -->
+        <!-- GALLERY 3 -->
 
         <div class="gitem">
 
           <img
             src="assets/images/thank-you-10k.jpg"
-            alt="Priyadarshani 10K Instagram milestone"
+            alt="Priyadarshani 10K milestone"
           >
 
         </div>
@@ -305,9 +1658,14 @@
     </section>
 
 
+
     <!-- ================= VIDEOS ================= -->
 
-    <section class="videos section" id="videos">
+    <section
+      class="videos section"
+      id="videos"
+    >
+
 
       <div class="heading">
 
@@ -317,11 +1675,13 @@
             Watch
           </p>
 
+
           <h2>
             Videos & Reels
           </h2>
 
         </div>
+
 
         <p>
           New content lives on Instagram.
@@ -330,10 +1690,11 @@
       </div>
 
 
+
       <div class="video-cards">
 
 
-        <!-- VIDEO 1 -->
+        <!-- ================= REEL 1 ================= -->
 
         <a
           class="video-card"
@@ -343,19 +1704,22 @@
         >
 
           <img
-            src="assets/images/thank-you-10k.jpg"
-            alt="Instagram reel"
+            src="assets/images/reel-thumb-1.jpg"
+            alt="Priyadarshani Instagram Reel 1"
           >
+
 
           <span class="play">
             ▶
           </span>
+
 
           <div>
 
             <small>
               INSTAGRAM
             </small>
+
 
             <strong>
               Watch the latest reels
@@ -366,7 +1730,8 @@
         </a>
 
 
-        <!-- VIDEO 2 -->
+
+        <!-- ================= REEL 2 ================= -->
 
         <a
           class="video-card"
@@ -376,19 +1741,22 @@
         >
 
           <img
-            src="assets/images/hero-priyadarshani.jpg"
-            alt="Instagram content"
+            src="assets/images/reel-thumb-2.jpg"
+            alt="Priyadarshani Instagram Reel 2"
           >
+
 
           <span class="play">
             ▶
           </span>
+
 
           <div>
 
             <small>
               INSTAGRAM
             </small>
+
 
             <strong>
               Explore more moments
@@ -399,7 +1767,8 @@
         </a>
 
 
-        <!-- VIDEO 3 -->
+
+        <!-- ================= REEL 3 ================= -->
 
         <a
           class="video-card"
@@ -409,19 +1778,22 @@
         >
 
           <img
-            src="assets/images/priyadarshani-portrait.jpg"
-            alt="Priyadarshani Instagram profile"
+            src="assets/images/reel-thumb-3.jpg"
+            alt="Priyadarshani Instagram Reel 3"
           >
+
 
           <span class="play">
             ▶
           </span>
+
 
           <div>
 
             <small>
               INSTAGRAM
             </small>
+
 
             <strong>
               Follow the journey
@@ -436,22 +1808,32 @@
     </section>
 
 
+
     <!-- ================= CLOSING ================= -->
 
     <section class="closing">
+
 
       <p class="eyebrow">
         Stay connected
       </p>
 
+
       <h2>
+
         More moments.
+
         <br>
-        <em>More memories.</em>
+
+        <em>
+          More memories.
+        </em>
+
       </h2>
 
+
       <a
-        class="primary dark"
+        class="primary"
         href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=xs3nyq0"
         target="_blank"
         rel="noopener noreferrer"
@@ -464,6 +1846,7 @@
   </main>
 
 
+
   <!-- ================= FOOTER ================= -->
 
   <footer>
@@ -472,6 +1855,7 @@
       © <span id="year"></span> Priyadarshani
     </span>
 
+
     <span>
       Made with ♡
     </span>
@@ -479,13 +1863,17 @@
   </footer>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+
+  <!-- ================= YEAR ================= -->
 
   <script>
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
+
   </script>
 
+
 </body>
+
 </html>
-```
